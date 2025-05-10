@@ -17,6 +17,7 @@ function Title(props) {
       </div>
       
       <div className="image-side">
+        <div className='imgBg'></div>
         <img 
           src={profileImage} 
           alt="Mukul Singh" 

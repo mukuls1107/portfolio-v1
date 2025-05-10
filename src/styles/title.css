@@ -37,15 +37,22 @@
 
 .section-box {
     display: flex;
-    width: 90vw; /* Use viewport width */
-    max-width: 1200px; /* Increased max-width for split layout */
-    justify-content: space-between; /* Space between the two sides */
-    align-items: center; /* Center items vertically */
-    flex-direction: row; /* Changed to row for side-by-side layout */
+    width: 90vw;
+    /* Use viewport width */
+    max-width: 1200px;
+    /* Increased max-width for split layout */
+    justify-content: space-between;
+    /* Space between the two sides */
+    align-items: center;
+    /* Center items vertically */
+    flex-direction: row;
+    /* Changed to row for side-by-side layout */
     min-height: 100vh;
     height: 100vh;
-    padding: 0px 1rem; /* Add some horizontal padding */
-    margin: 0 auto; /* Center the box */
+    padding: 0px 1rem;
+    /* Add some horizontal padding */
+    margin: 0 auto;
+    /* Center the box */
     border: 1px solid red;
 }
 
@@ -55,17 +62,151 @@
 }
 
 .image-side {
-    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .profile-image {
-    max-width: 100%;
+    z-index: 99;
+    width: 80%;
+    max-width: 450px;
+    height: auto;
     max-height: 80vh;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    position: relative;
+    left: 25px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Paper mesh effect base */
+.imgBg {
+    position: absolute;
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    max-height: 520px;
+    border-radius: 50%; 
+    background: linear-gradient(135deg, #64ffda11 0%, #ccd6f622 50%, #8892b033 100%);
+    border: 2px dashed #64ffda;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    transform: translate(40px, 20px);
+    z-index: 1;
+    transition: all 0.3s ease;
+    /* Rough edge effect */
+    filter: url(#rough-edge);
+}
+
+/* Hand-drawn inner circle */
+.imgBg::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    background: transparent;
+    border: 3px solid rgba(100, 255, 218, 0.15);
+    z-index: 0;
+    /* Wavy border effect */
+    animation: waver 8s infinite linear;
+    /* Hand-drawn look with dotted pattern */
+    background-image: radial-gradient(#64ffda 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.3;
+}
+
+/* Outer decorative ring */
+.imgBg::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    border-radius: 50%;
+    /* Sketchy border effect */
+    border: 1px solid #64ffda;
+    z-index: -1;
+    opacity: 0.2;
+    transform: rotate(-5deg);
+    filter: blur(1px);
+    animation: rotation 20s infinite linear;
+}
+
+/* Additional decorative elements */
+.artistic-dots {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    top: -20%;
+    left: -20%;
+    background-image: radial-gradient(#64ffda 1px, transparent 2px);
+    background-size: 40px 40px;
+    border-radius: 50%;
+    z-index: -2;
+    opacity: 0.15;
+    animation: pulse 6s infinite alternate;
+}
+
+/* Animation for wave effect */
+@keyframes waver {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(1deg) scale(1.01); }
+    50% { transform: rotate(0deg) scale(1); }
+    75% { transform: rotate(-1deg) scale(0.99); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Animation for outer ring rotation */
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Animation for pulsing effect */
+@keyframes pulse {
+    from { opacity: 0.1; }
+    to { opacity: 0.2; }
+}
+
+/* Hover effects */
+.image-side:hover .imgBg {
+    transform: translate(30px, 10px);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.4);
+}
+
+.image-side:hover .profile-image {
+    transform: scale(1.02);
+}
+
+/* Paper texture effect */
+.image-side:hover .artistic-dots {
+    animation-duration: 3s;
+}
+
+@media (max-width: 992px) {
+    .image-side {
+        max-width: 45%;
+    }
+
+    .profile-image {
+        max-width: 400px;
+    }
+
+    .imgBg {
+        max-width: 400px;
+        max-height: 400px;
+        transform: translate(15px, 15px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -73,13 +214,33 @@
         flex-direction: column;
         padding: 2rem 1rem;
     }
-    
+
     .content-side {
         padding-right: 0;
         margin-bottom: 2rem;
-    }
-    
-    .image-side {
         width: 100%;
+    }
+
+    .image-side {
+        max-width: 100%;
+        /* Full width on mobile */
+        width: 100%;
+    }
+
+    .profile-image {
+        max-width: 320px;
+        /* Smaller on mobile */
+    }
+
+    .imgBg {
+        max-width: 320px;
+        max-height: 320px;
+        transform: translate(10px, 10px);
+    }
+}
+
+@media (max-width: 425px) {
+    .image-side {
+        display: none;
     }
 }
