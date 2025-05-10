@@ -1,0 +1,31 @@
+import React from 'react'
+import "../styles/title.css"
+// Import the image properly
+import profileImage from "../assets/portfolio2.png"
+
+
+
+function Title(props) {
+  console.log(1)
+  return (
+    <div className="section-box">
+      <div className="content-side">
+        <p className="clr-light">Hi, my name is</p>
+        <h1 className="head">{props.name}</h1>
+        <p className="blur extend">I build things for the web.</p>
+        <p className='blur'>I'm a {props.age} year old developer living in India, who got into coding trying to make a simple discord bot. Eventually, my interest grew and started exploring different parts of the CS world.  </p>
+      </div>
+      
+      <div className="image-side">
+        <img 
+          src={profileImage} 
+          alt="Mukul Singh" 
+          className="profile-image" 
+        />
+      </div>
+    </div>
+  );
+}
+
+export default Title
+

@@ -1,0 +1,9 @@
+body {
+  background-color: #020c1b;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+}

@@ -1,0 +1,85 @@
+.clr-light {
+    color: #64ffda;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: large;
+    /* font-style: normal; */
+}
+
+.head {
+    color: #ccd6f6;
+    font-family: 'Lato';
+    font-size: 80px;
+}
+
+
+.blur {
+    color: #8892b0;
+    font-family: 'Lato';
+    /* font-size: 20px; */
+}
+
+.extend {
+    font-size: 80px;
+}
+
+.box-title {
+    /* border: 1px solid red;
+    max-width: 550px;
+    position: relative;
+    top: 15rem;
+    left: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; */
+
+}
+
+.section-box {
+    display: flex;
+    width: 90vw; /* Use viewport width */
+    max-width: 1200px; /* Increased max-width for split layout */
+    justify-content: space-between; /* Space between the two sides */
+    align-items: center; /* Center items vertically */
+    flex-direction: row; /* Changed to row for side-by-side layout */
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px 1rem; /* Add some horizontal padding */
+    margin: 0 auto; /* Center the box */
+    border: 1px solid red;
+}
+
+.content-side {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .section-box {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    
+    .content-side {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .image-side {
+        width: 100%;
+    }
+}
