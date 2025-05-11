@@ -6,7 +6,6 @@ import profileImage from "../assets/portfolio2.png"
 
 
 function Title(props) {
-  console.log(1)
   return (
     <div className="section-box">
       <div className="content-side">
