@@ -16,6 +16,7 @@ git clone git@github.com:mukuls1107/portfolio-v1.git
 cd portfolio-v1
 npm install
 npm run dev
+
 ```
 
 # Contact
