@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/title.css";
 // Import the image properly
 import profileImage from "../assets/portfolio2.png";
-import Nav from "./Nav";
+import ContactLinks from "./ContactLinks";
 
 function Title(props) {
   return (
@@ -13,12 +13,12 @@ function Title(props) {
           <h1 className="head">{props.name}</h1>
           <p className="blur extend">I build things for the web.</p>
           <p className="blur">
-            I'm a {props.age} year old developer living in India, who got into
+            I'm a passionate developer living in India, who got into
             coding trying to make a simple discord bot. Eventually, my interest
-            grew and started exploring different parts of the CS world.{" "}
+            grew and I started exploring different parts of the CS world.{" "}
           </p>
         </div>
-        <Nav />
+        <ContactLinks />
       </div>
 
       <div className="image-side">
