@@ -9,7 +9,7 @@ const About = () => {  return (
           <span className="line"></span>
         </div>
         <p className="blur tag">
-          Hey there! I'm Mukul Singh — a developer with a curious mind and a
+          Hey there! I'm Mukul Singh — a self taught developer with a curious mind and a
           keyboard that's been through countless lines of trial, error, and
           breakthroughs. My journey started with a simple goal: build a Discord
           bot for fun. But that little experiment unlocked a world I couldn't
