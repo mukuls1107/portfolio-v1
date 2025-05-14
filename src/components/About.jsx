@@ -10,12 +10,12 @@ const About = () => {
           <span className="line"></span>
         </div>
         <p className="blur tag">
-          Hey there! I'm Mukul Singh — a self taught developer with a curious
-          mind and a keyboard that's been through countless lines of trial,
-          error, and breakthroughs. My journey started with a simple goal: build
-          a Discord bot for fun. But that little experiment unlocked a world I
-          couldn't look away from. Since then, I've been diving deep into
-          full-stack web development, backend systems, and everything in
+          Hey there! I'm <span className="name-glow">Mukul Singh</span> — a self taught developer with
+          a curious mind and a keyboard that's been through countless lines of
+          trial, error, and breakthroughs. My journey started with a simple
+          goal: build a Discord bot for fun. But that little experiment unlocked
+          a world I couldn't look away from. Since then, I've been diving deep
+          into full-stack web development, backend systems, and everything in
           between.
         </p>
 
@@ -33,8 +33,9 @@ const About = () => {
         </ul>
 
         <p className="blur tag">
-           Outside of code, you’ll probably find me exploring new tech, helping friends debug their projects, or maybe we’ll just bump into each other at the gym.
-
+          Outside of code, you’ll probably find me exploring new tech, helping
+          friends debug their projects, or maybe we’ll just bump into each other
+          at the gym.
         </p>
       </div>
     </div>

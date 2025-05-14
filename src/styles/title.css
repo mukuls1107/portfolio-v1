@@ -188,6 +188,10 @@
     animation: pulse 6s infinite alternate;
 }
 
+.name-glow{
+    color: #64ffda;
+}
+
 /* Animation for wave effect */
 @keyframes waver {
     0% { transform: rotate(0deg) scale(1); }
