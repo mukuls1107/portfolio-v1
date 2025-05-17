@@ -31,6 +31,7 @@
     line-height: 1.7;
     color: #8892b0;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 0.5rem; /* Added margin for better spacing */
 }
 
 .skillsList {
@@ -120,7 +121,9 @@
 
 @media (max-width: 768px) {
     .aboutBox {
-        padding: 2rem 1rem;
+        padding: 0 1rem 2rem 1rem; /* Remove top padding completely, keep bottom padding */
+        min-height: auto; /* Remove minimum height constraint */
+        margin-top: 1rem; /* Add some space at the top */
     }
     
     .aboutTag {
@@ -130,6 +133,10 @@
     .line {
         width: 150px;
         height: 2px;
+    }
+    
+    .innerBox {
+        gap: 1.5rem; /* Maintain appropriate spacing between elements */
     }
 }
 
@@ -159,10 +166,12 @@
     .skillsList {
         grid-template-columns: 1fr;
         margin-left: 1rem;
+        gap: 0.3rem 1rem; /* Reduced vertical gap between skills */
     }
     
     .skillItem {
         font-size: 14px;
+        margin-bottom: 6px; /* Reduced margin between skill items */
     }
     
     .skillItem::before {
@@ -171,7 +180,13 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
+    .aboutBox {
+        padding-top: 0;
+        padding-bottom: 1.5rem; /* Reduced bottom padding */
+        min-height: auto; /* Remove the minimum height constraint */
+    }
+    
     .aboutTag {
         font-size: 32px;
     }
@@ -180,8 +195,54 @@
         font-size: 14px;
     }
     
+    .innerBox {
+        gap: 1rem; /* Reduced gap between elements */
+    }
+    
+    .headingContainer {
+        margin-bottom: 0.8rem; /* Reduced margin below heading */
+    }
+}
+
+@media (max-width: 534px) and (min-width: 426px) {
     .aboutBox {
-        padding: 1rem 0.8rem;
+        padding-top: 1rem;
+        min-height: auto;
+    }
+    
+    .aboutTag {
+        font-size: 36px;
+    }
+    
+    .blur.tag {
+        font-size: 14px;
+    }
+    
+    .line {
+        width: 120px;
+    }
+}
+
+@media (max-width: 375px) {
+    .aboutTag {
+        font-size: 28px;
+    }
+    
+    .blur.tag {
+        font-size: 14px;
+        line-height: 1.5; /* Reduced line height */
+    }
+    
+    .aboutBox {
+        padding: 0 0.8rem 1rem;
+    }
+    
+    .innerBox {
+        gap: 0.8rem; /* Further reduced gap */
+    }
+    
+    .headingContainer {
+        margin-bottom: 0.6rem; /* Reduced margin */
     }
 }
 

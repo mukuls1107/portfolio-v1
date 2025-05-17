@@ -37,7 +37,7 @@
     vertical-align: middle;
 }
 
-.pbox{
+.pbox {
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -48,7 +48,7 @@
     flex-wrap: wrap;
 }
 
-.projectItems{
+.projectItems {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@
     color: #e6f1ff;
     font-size: 24px;
     font-weight: 700;
+    font-family: 'Lato';
     margin: 0 0 15px;
     position: relative;
     display: inline-block;
@@ -129,6 +130,7 @@
 
 .projectDescription {
     color: #a8b2d1;
+    font-family: 'Lato';
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
@@ -225,7 +227,7 @@
     .innerBox {
         max-width: 100%;
     }
-    
+
     .projectItems {
         width: calc(33.333% - 1.333rem);
     }
@@ -249,17 +251,17 @@
     .innerBox {
         gap: 1.5rem;
     }
-    
+
     .projectItems {
         width: calc(50% - 1rem);
         min-height: 320px;
         padding: 1.5rem;
     }
-    
+
     .projectTitle {
         font-size: 20px;
     }
-    
+
     .pbox {
         gap: 2rem;
     }
@@ -278,11 +280,11 @@
         width: 150px;
         height: 2px;
     }
-    
+
     .pbox {
         gap: 1.5rem;
     }
-    
+
     .projectItems {
         width: 100%;
         min-height: 300px;
@@ -316,7 +318,7 @@
     .projectDescription {
         font-size: 15px;
     }
-    
+
     .techItem {
         font-size: 12px;
         padding: 5px 10px;

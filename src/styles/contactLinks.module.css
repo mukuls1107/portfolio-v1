@@ -87,11 +87,12 @@
 @media (max-width: 480px) {
     .container {
         gap: 0.8rem;
+        margin-top: 1rem; /* Reduced top margin for smaller screens */
     }
     
     .items {
-        height: 38px;
-        width: 38px;
+        height: 36px;
+        width: 36px;
         font-size: 18px;
     }
     
@@ -104,14 +105,31 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 534px) and (min-width: 426px) {
     .container {
-        gap: 0.6rem;
+        gap: 1rem;
+        margin-top: 1.2rem;
     }
     
     .items {
         height: 35px;
         width: 35px;
+    }
+    
+    .items svg {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        gap: 0.6rem;
+        margin-top: 0.8rem; /* Even smaller margin for tiny screens */
+    }
+    
+    .items {
+        height: 32px;
+        width: 32px;
     }
     
     .items svg {

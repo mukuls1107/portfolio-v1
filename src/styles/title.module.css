@@ -3,7 +3,7 @@
     font-family: monospace;
     font-weight: 900;
     font-size: large;
-    /* font-style: normal; */
+    margin-bottom: 0.3rem; /* Added small margin */
 }
 
 .head {
@@ -15,7 +15,7 @@
     text-shadow: 0 2px 10px rgba(204, 214, 246, 0.15);
     transition: all 0.3s ease;
     letter-spacing: -1px;
-    margin: 0;
+    margin: 0 0 0.3rem 0; /* Added margin bottom */
     font-weight: 700;
 }
 
@@ -46,10 +46,14 @@
 .blur {
     color: #8892b0;
     font-family: 'Lato';
-    /* font-size: 20px; */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0.5rem; /* Added bottom margin for consistent spacing */
 }
 
-.extend {    font-size: 80px;
+.extend {
+    font-size: 80px;
+    margin-bottom: 0.5rem; /* Added bottom margin */
 }
 
 /* .box-title { */
@@ -80,8 +84,10 @@
     height: 100vh;
     padding: 0px 1rem;
     /* Add some horizontal padding */
-    margin: 0 auto;    /* Center the box */
+    margin: 0 auto;
+    /* Center the box */
     /* border: 1px solid red; */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
 }
 
 .contentSide {
@@ -92,11 +98,19 @@
     flex-direction: column;
 }
 
+@media (max-width: 480px) {
+    .contentSide {
+        gap: 0.8rem; /* Reduced gap for mobile */
+        padding-right: 0;
+    }
+}
+
 .imageSide {
     position: relative;
     width: 100%;
     max-width: 520px;
-    height: auto;    margin: 30px auto;
+    height: auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,8 +126,17 @@
     object-fit: contain;
     transition: all 0.3s ease;
     position: relative;
-    left: 25px;
+    left: 25px; /* Will be overridden for better centering at certain breakpoints */
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Ensure profile image is responsive */
+@media (max-width: 534px) {
+    .profileImage {
+        left: auto; /* Override the left position for better centering */
+        transform: translateX(10px); /* Slight offset to compensate for background */
+    }
 }
 
 /* Paper mesh effect base */
@@ -130,6 +153,11 @@
     transform: translate(40px, 20px);
     z-index: 1;
     transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* Center the background element */
 }
 
 /* Hand-drawn inner circle */
@@ -183,6 +211,7 @@
     z-index: -2;
     opacity: 0.15;
     animation: pulse 6s infinite alternate;
+    margin: auto; /* Center the dots */
 }
 
 .nameGlow{
@@ -221,17 +250,40 @@
 }
 
 /* Paper texture effect */
-.imageSide:hover .artistic-dots {
+.imageSide:hover .artisticDots {
     animation-duration: 3s;
+}
+
+@media (max-width: 600px) {
+    .head {
+        font-size: 60px;
+    }
+    
+    .extend {
+        font-size: 60px;
+    }
+    
+    .sectionBox {
+        padding-top: 1.5rem;
+    }
+    
+    .blur {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 992px) {
     .imageSide {
         max-width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .profileImage {
         max-width: 400px;
+        /* left: auto; Remove the left offset on tablet */
+        transform: translateX(15px); /* Small offset to accommodate the background */
     }
 
     .imgBg {
@@ -241,38 +293,167 @@
     }
 }
 
-@media (max-width: 768px) {
-    .sectionBox {
+@media (max-width: 768px) {    .sectionBox {
         flex-direction: column;
         padding: 2rem 1rem;
+        min-height: auto; /* Remove fixed height constraint */
+        height: auto;
+        padding-bottom: 4rem; /* Increased bottom padding to create more space */
     }
 
     .contentSide {
         padding-right: 0;
         margin-bottom: 2rem;
         width: 100%;
-    }
-
-    .imageSide {
+    }    .imageSide {
         max-width: 100%;
         /* Full width on mobile */
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2.5rem; /* Increased bottom margin to create more space */
+        height: 380px; /* Set a fixed height for better spacing */
+        position: relative;
     }
-
+    
+    .artisticDots {
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
+        opacity: 0.12;
+    }
+    
     .profileImage {
         max-width: 320px;
-        /* Smaller on mobile */
-    }
-
-    .imgBg {
-        max-width: 320px;
-        max-height: 320px;
+        left: auto; /* Remove left percentage */
+        right: auto;
+        transform: translateX(10px);
+        margin: 0 auto;
+    }    .imgBg {
+        max-width: 350px; /* Reduced size to better match the image */
+        max-height: 350px;
         transform: translate(10px, 10px);
+        margin: auto;
+        padding-bottom: 0; /* Remove padding */
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute; /* Ensure absolute positioning works correctly */
+    }
+}
+
+@media (max-width: 534px) and (min-width: 426px) {
+    .sectionBox {
+        min-height: auto;
+        height: auto;
+        padding: 2rem 0.8rem;
+        overflow: hidden;
+    }
+    
+    .head {
+        font-size: 45px;
+    }
+    
+    .extend {
+        font-size: 45px;
+    }
+    
+    .contentSide {
+        margin-bottom: 1.5rem;
+    }
+    
+    .imageSide {
+        max-width: 280px;
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px; /* Fixed height to maintain proper proportions */
+    }
+    
+    .profileImage {
+        max-width: 250px;
+        left: auto;
+        transform: translateX(10px);
+        margin: 0 auto;
+    }
+    
+    .imgBg {
+        max-width: 250px;
+        max-height: 250px;
+        transform: translate(8px, 8px);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    
+    .artisticDots {
+        width: 120%;
+        height: 120%;
+        left: -10%;
+        top: -10%;
+    }
+    
+    .blur {
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
 
 @media (max-width: 425px) {
     .imageSide {
         display: none;
+    }
+    
+    .sectionBox {
+        min-height: auto;
+        height: auto;
+        padding: 1.5rem 1rem; /* Reduced padding */
+        padding-bottom: 0.5rem; /* Even smaller bottom padding to reduce gap with About */
+    }
+    
+    .blur {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 0.3rem; /* Smaller margin between paragraphs */
+    }
+    
+    .head {
+        font-size: 45px; /* Smaller font size */
+        margin-bottom: 0.2rem;
+    }
+    
+    .extend {
+        font-size: 40px; /* Smaller extended text */
+        margin-bottom: 0.5rem;
+    }
+    
+    .clrLight {
+        font-size: 14px;
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* Additional styling for extra small devices */
+@media (max-width: 360px) {
+    .head {
+        font-size: 38px;
+    }
+    
+    .extend {
+        font-size: 34px;
+    }
+    
+    .contentSide {
+        gap: 0.6rem;
+    }
+    
+    .sectionBox {
+        padding: 1.2rem 0.8rem 0.5rem;
     }
 }

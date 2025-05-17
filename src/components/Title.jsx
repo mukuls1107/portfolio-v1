@@ -10,7 +10,9 @@ function Title(props) {
         <div>
           <p className={styles.clrLight}>Hi, my name is</p>
           <h1 className={styles.head}>{props.name}</h1>
-          <p className={`${styles.blur} ${styles.extend}`}>I build things for the web.</p>
+          <p className={`${styles.blur} ${styles.extend}`}>
+            I build things for the web.
+          </p>
           <p className={styles.blur}>
             I'm a passionate developer living in India, who got into coding
             trying to make a simple discord bot. Eventually, my interest grew
@@ -18,11 +20,15 @@ function Title(props) {
           </p>
         </div>
         <ContactLinks />
-      </div>
-
+      </div>{" "}
       <div className={styles.imageSide}>
         <div className={styles.imgBg}></div>
-        <img src={profileImage} alt="Mukul Singh" className={styles.profileImage} />
+        <div className={styles.artisticDots}></div>
+        <img
+          src={profileImage}
+          alt="Mukul Singh"
+          className={styles.profileImage}
+        />
       </div>
     </div>
   );
