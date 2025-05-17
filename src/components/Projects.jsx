@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "../styles/projects.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   return (
-    <div className={styles.projectsBox}>
+    <div className={styles.projectsBox} id={props.id} ref={ref}>
       <div className={styles.innerBox}>
         <div className={styles.headingContainer}>
           <h1 className={styles.projectsTag}>/projects</h1>
@@ -72,10 +72,9 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </div>      </div>
     </div>
   );
-};
+});
 
 export default Projects;

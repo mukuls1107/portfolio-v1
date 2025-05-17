@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "../styles/about.module.css";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   return (
-    <div className={styles.aboutBox}>
+    <div className={styles.aboutBox} id={props.id} ref={ref}>
       <div className={styles.innerBox}>
         <div className={styles.headingContainer}>
           <h1 className={styles.aboutTag}>/about me</h1>
@@ -37,10 +37,9 @@ const About = () => {
           Outside of code, you'll probably find me exploring new tech, helping
           friends debug their projects, or maybe we'll just bump into each other
           at the gym.
-        </p>
-      </div>
+        </p>      </div>
     </div>
   );
-};
+});
 
 export default About;

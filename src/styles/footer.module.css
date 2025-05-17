@@ -1,0 +1,75 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #e6f1ff;
+    gap: 1.3rem;
+    padding: 2rem;
+}
+
+.name,
+.basic,
+.backlinks {
+    font-family: "Lato";
+    font-size: 18px;
+}
+
+.basic {
+    font-size: 16px;
+}
+
+.backlinks {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.items {
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    color: #e6f1ff94;
+}
+
+.items::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.backlinks>.items:hover {
+    color: #64ffda;
+    cursor: pointer;
+}
+
+.items:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .name,
+    .basic,
+    .backlinks {
+        font-family: "Lato";
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .name,
+    .basic,
+    .backlinks {
+        font-family: "Lato";
+        font-size: 13px;
+    }
+
+}

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "../styles/title.module.css";
 import profileImage from "../assets/portfolio2.png";
 import ContactLinks from "./ContactLinks";
 
-function Title(props) {
+const Title = forwardRef((props, ref) => {
   return (
-    <div className={styles.sectionBox}>
+    <div className={styles.sectionBox} id={props.id} ref={ref}>
       <div className={styles.contentSide}>
         <div>
           <p className={styles.clrLight}>Hi, my name is</p>
@@ -18,8 +18,7 @@ function Title(props) {
             trying to make a simple discord bot. Eventually, my interest grew
             and I started exploring different parts of the CS world.{" "}
           </p>
-        </div>
-        <ContactLinks />
+        </div>        <ContactLinks />
       </div>{" "}
       <div className={styles.imageSide}>
         <div className={styles.imgBg}></div>
@@ -32,6 +31,6 @@ function Title(props) {
       </div>
     </div>
   );
-}
+});
 
 export default Title;
