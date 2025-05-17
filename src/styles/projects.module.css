@@ -1,0 +1,346 @@
+.projectsBox {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.innerBox {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.projectsTag {
+    color: #64ffda;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 70px;
+    position: relative;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.line {
+    display: inline-block;
+    width: 250px;
+    height: 3px;
+    background-color: #95a19ed0;
+    opacity: 0.6;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.pbox{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.projectItems{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 350px;
+    width: calc(33.333% - 1.333rem);
+    background-color: rgba(13, 25, 41, 0.9);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    overflow: hidden;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.projectItems:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px -20px rgba(100, 255, 218, 0.4);
+    background-color: rgba(23, 42, 69, 0.95);
+    border: 1px solid rgba(100, 255, 218, 0.4);
+}
+
+.projectItems::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #64ffda, rgba(10, 25, 47, 0.5), #64ffda);
+    background-size: 200% 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease, background-position 0.7s ease;
+}
+
+.projectItems:hover::before {
+    transform: scaleX(1);
+    background-position: right center;
+}
+
+.projectFolder {
+    color: #64ffda;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.projectTitle {
+    color: #e6f1ff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.projectItems:hover .projectTitle {
+    color: #64ffda;
+}
+
+.projectTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.projectItems:hover .projectTitle::after {
+    width: 100%;
+}
+
+.projectDescription {
+    color: #a8b2d1;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.projectItems:hover .projectDescription {
+    color: #ccd6f6;
+}
+
+.projectTech {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 20px;
+    list-style: none;
+    gap: 10px;
+}
+
+.techItem {
+    color: #64ffda;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgba(100, 255, 218, 0.05);
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.techItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 255, 218, 0.15);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.techItem:hover::before {
+    transform: scaleX(1);
+}
+
+.techItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+    color: #ffffff;
+}
+
+.projectLinks {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.projectLink {
+    color: #ccd6f6;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(100, 255, 218, 0.05);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.projectLink:hover {
+    color: #64ffda;
+    transform: translateY(-3px) rotate(5deg);
+    background-color: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 1400px) {
+    .projectsBox {
+        padding: 2.5rem 1rem;
+    }
+
+    .innerBox {
+        max-width: 100%;
+    }
+    
+    .projectItems {
+        width: calc(33.333% - 1.333rem);
+    }
+}
+
+@media (max-width: 1200px) {
+    .projectItems {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .projectsTag {
+        font-size: 60px;
+    }
+
+    .line {
+        width: 200px;
+    }
+
+    .innerBox {
+        gap: 1.5rem;
+    }
+    
+    .projectItems {
+        width: calc(50% - 1rem);
+        min-height: 320px;
+        padding: 1.5rem;
+    }
+    
+    .projectTitle {
+        font-size: 20px;
+    }
+    
+    .pbox {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectsBox {
+        padding: 2rem 1rem;
+    }
+
+    .projectsTag {
+        font-size: 50px;
+    }
+
+    .line {
+        width: 150px;
+        height: 2px;
+    }
+    
+    .pbox {
+        gap: 1.5rem;
+    }
+    
+    .projectItems {
+        width: 100%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .projectsBox {
+        padding: 1.5rem 1rem;
+    }
+
+    .projectsTag {
+        font-size: 40px;
+    }
+
+    .line {
+        width: 100px;
+        height: 2px;
+        margin-left: 10px;
+    }
+
+    .blur.tag {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .innerBox {
+        gap: 1.2rem;
+    }
+
+    .projectDescription {
+        font-size: 15px;
+    }
+    
+    .techItem {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .projectsTag {
+        font-size: 32px;
+    }
+
+    .blur.tag {
+        font-size: 14px;
+    }
+
+    .projectsBox {
+        padding: 1rem 0.8rem;
+    }
+}
+
+.headingContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}

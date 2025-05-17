@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/contactLinks.css";
+import styles from "../styles/contactLinks.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function redirect(element) {
@@ -26,22 +26,22 @@ function redirect(element) {
 
 function ContactLinks() {
   return (
-    <div className="container">
-      <div className="items">
+    <div className={styles.container}>
+      <div className={styles.items}>
         <FontAwesomeIcon
           icon={["fab", "github"]}
           id="github"
           onClick={redirect}
         />
       </div>
-      <div className="items">
+      <div className={styles.items}>
         <FontAwesomeIcon
           icon={["fab", "twitter"]}
           id="twitter"
           onClick={redirect}
         />
       </div>
-      <div className="items">
+      <div className={styles.items}>
         <FontAwesomeIcon
           icon={["fab", "linkedin"]}
           id="linkedin"

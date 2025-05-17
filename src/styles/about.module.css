@@ -1,4 +1,4 @@
-.about-box {
+.aboutBox {
     width: 90vw;
     max-width: 1200px;
     margin: 0 auto;
@@ -9,14 +9,14 @@
     justify-content: center;
 }
 
-.inner-box {
+.innerBox {
     display: flex;
     gap: 2rem;
     flex-direction: column;
     max-width: 800px;
 }
 
-.about-tag {
+.aboutTag {
     color: #64ffda;
     font-family: monospace;
     font-weight: 900;
@@ -33,7 +33,7 @@
     font-family: 'Lato', sans-serif;
 }
 
-.skills-list {
+.skillsList {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
     gap: 0.5rem 1rem;
@@ -44,7 +44,7 @@
     list-style-position: outside;
 }
 
-.skill-item {
+.skillItem {
     position: relative;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -55,7 +55,7 @@
     align-items: center;
 }
 
-.skill-item::before {
+.skillItem::before {
     content: '▹';
     position: absolute;
     left: -1.2rem;
@@ -74,30 +74,34 @@
     vertical-align: middle;
 }
 
-.heading-container {
+.headingContainer {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.heading-container .about-tag {
+.headingContainer .aboutTag {
     margin: 0;
     display: inline-block;
 }
 
+.nameGlow {
+    color: #64ffda;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
-    .about-box {
+    .aboutBox {
         padding: 2.5rem 1rem;
     }
     
-    .inner-box {
+    .innerBox {
         max-width: 700px;
     }
 }
 
 @media (max-width: 992px) {
-    .about-tag {
+    .aboutTag {
         font-size: 60px;
     }
     
@@ -109,17 +113,17 @@
         font-size: 16px;
     }
     
-    .inner-box {
+    .innerBox {
         gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .about-box {
+    .aboutBox {
         padding: 2rem 1rem;
     }
     
-    .about-tag {
+    .aboutTag {
         font-size: 50px;
     }
     
@@ -130,11 +134,11 @@
 }
 
 @media (max-width: 576px) {
-    .about-box {
+    .aboutBox {
         padding: 1.5rem 1rem;
     }
     
-    .about-tag {
+    .aboutTag {
         font-size: 40px;
     }
       .line {
@@ -148,27 +152,27 @@
         line-height: 1.6;
     }
     
-    .inner-box {
+    .innerBox {
         gap: 1.2rem;
     }
     
-    .skills-list {
+    .skillsList {
         grid-template-columns: 1fr;
         margin-left: 1rem;
     }
     
-    .skill-item {
+    .skillItem {
         font-size: 14px;
     }
     
-    .skill-item::before {
+    .skillItem::before {
         left: -1rem;
         font-size: 14px;
     }
 }
 
 @media (max-width: 375px) {
-    .about-tag {
+    .aboutTag {
         font-size: 32px;
     }
     
@@ -176,7 +180,7 @@
         font-size: 14px;
     }
     
-    .about-box {
+    .aboutBox {
         padding: 1rem 0.8rem;
     }
 }

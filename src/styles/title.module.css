@@ -1,4 +1,4 @@
-.clr-light {
+.clrLight {
     color: #64ffda;
     font-family: monospace;
     font-weight: 900;
@@ -49,8 +49,7 @@
     /* font-size: 20px; */
 }
 
-.extend {
-    font-size: 80px;
+.extend {    font-size: 80px;
 }
 
 /* .box-title { */
@@ -65,7 +64,7 @@
 
 /* } */
 
-.section-box {
+.sectionBox {
     display: flex;
     width: 90vw;
     /* Use viewport width */
@@ -81,12 +80,11 @@
     height: 100vh;
     padding: 0px 1rem;
     /* Add some horizontal padding */
-    margin: 0 auto;
-    /* Center the box */
+    margin: 0 auto;    /* Center the box */
     /* border: 1px solid red; */
 }
 
-.content-side {
+.contentSide {
     flex: 1;
     padding-right: 2rem;
     display: flex;
@@ -94,18 +92,17 @@
     flex-direction: column;
 }
 
-.image-side {
+.imageSide {
     position: relative;
     width: 100%;
     max-width: 520px;
-    height: auto;
-    margin: 30px auto;
+    height: auto;    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.profile-image {
+.profileImage {
     z-index: 99;
     width: 80%;
     max-width: 450px;
@@ -174,7 +171,7 @@
 }
 
 /* Additional decorative elements */
-.artistic-dots {
+.artisticDots {
     position: absolute;
     width: 140%;
     height: 140%;
@@ -188,7 +185,7 @@
     animation: pulse 6s infinite alternate;
 }
 
-.name-glow{
+.nameGlow{
     color: #64ffda;
 }
 
@@ -214,26 +211,26 @@
 }
 
 /* Hover effects */
-.image-side:hover .imgBg {
+.imageSide:hover .imgBg {
     transform: translate(30px, 10px);
     box-shadow: 0 0 30px rgba(100, 255, 218, 0.4);
 }
 
-.image-side:hover .profile-image {
+.imageSide:hover .profileImage {
     transform: scale(1.02);
 }
 
 /* Paper texture effect */
-.image-side:hover .artistic-dots {
+.imageSide:hover .artistic-dots {
     animation-duration: 3s;
 }
 
 @media (max-width: 992px) {
-    .image-side {
+    .imageSide {
         max-width: 45%;
     }
 
-    .profile-image {
+    .profileImage {
         max-width: 400px;
     }
 
@@ -245,24 +242,24 @@
 }
 
 @media (max-width: 768px) {
-    .section-box {
+    .sectionBox {
         flex-direction: column;
         padding: 2rem 1rem;
     }
 
-    .content-side {
+    .contentSide {
         padding-right: 0;
         margin-bottom: 2rem;
         width: 100%;
     }
 
-    .image-side {
+    .imageSide {
         max-width: 100%;
         /* Full width on mobile */
         width: 100%;
     }
 
-    .profile-image {
+    .profileImage {
         max-width: 320px;
         /* Smaller on mobile */
     }
@@ -275,7 +272,7 @@
 }
 
 @media (max-width: 425px) {
-    .image-side {
+    .imageSide {
         display: none;
     }
 }

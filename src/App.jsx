@@ -1,9 +1,9 @@
 import "./App.css";
 import Title from "./components/Title";
 import About from "./components/About";
-
+import Projects from "./components/Projects";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fas, faFolder, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import {
   fab,
   faTwitter,
@@ -11,13 +11,15 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(fas, fab, faTwitter, faGithub, faLinkedin);
+library.add(fas, fab, faTwitter, faGithub, faLinkedin, faFolder, faExternalLinkAlt);
 
 function App() {
   return (
     <>
-      <Title name="Mukul Singh" classname="test" />
+      <Title name="Mukul Singh" />
       <About />
+      <Projects></Projects>
+
     </>
   );
 }
