@@ -13,6 +13,28 @@ const Projects = forwardRef((props, ref) => {
         <div className={`${styles.pbox} ${styles.blur}`}>
           {" "}
           <div className={styles.projectItems}>
+            <h3 className={styles.projectTitle}>File Upload API</h3>
+            <p className={styles.projectDescription}>
+              A simple file sharing backend system built using Flask, MongoDB
+              and Cloudinary. Supports user and admin sign up/ sign in for a
+              secured system and allow admins to upload the files and let users
+              download them with a unique link.
+            </p>
+            <ul className={styles.projectTech}>
+              <li className={styles.techItem}>Flask</li>
+              <li className={styles.techItem}>Cloudinary</li>
+              <li className={styles.techItem}>MongoDB</li>
+            </ul>
+            <div className={styles.projectLinks}>
+              <a
+                href="https://github.com/mukuls1107/ez-lab-intern-test"
+                className={styles.projectLink}
+              >
+                <FontAwesomeIcon icon={["fab", "github"]} />
+              </a>
+            </div>
+          </div>
+          <div className={styles.projectItems}>
             <h3 className={styles.projectTitle}>Sugo</h3>
             <p className={styles.projectDescription}>
               A lightweight, intuitive static website generator that transforms
@@ -72,7 +94,8 @@ const Projects = forwardRef((props, ref) => {
               </a>
             </div>
           </div>
-        </div>      </div>
+        </div>{" "}
+      </div>
     </div>
   );
 });
