@@ -24,7 +24,38 @@
     color: #8892b0;
     transition: all 0.3s ease;
 }
+.items {
+  margin: 10px;
+}
 
+.iconWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 110%; /* Below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.iconWrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 .items::before {
     content: '';
     position: absolute;

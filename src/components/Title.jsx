@@ -18,7 +18,8 @@ const Title = forwardRef((props, ref) => {
             trying to make a simple discord bot. Eventually, my interest grew
             and I started exploring different parts of the CS world.{" "}
           </p>
-        </div>        <ContactLinks />
+        </div>{" "}
+        <ContactLinks />
       </div>{" "}
       <div className={styles.imageSide}>
         <div className={styles.imgBg}></div>
