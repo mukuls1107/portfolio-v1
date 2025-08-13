@@ -17,7 +17,7 @@ function redirect(element) {
       url = `https://x.com/mukulownsyou`;
       break;
     case "resume":
-      url = `https://drive.google.com/file/d/130jWh9tyjMqSDlSXucHqEHKq2I7_7lsL/view`;
+      url = `https://drive.google.com/file/d/130jWh9tyjMqSDlSXucHqEHKq2I7_7lsL/view?usp=sharing`;
       break;
     default:
       url = `https://x.com/mukulownsyou`;
