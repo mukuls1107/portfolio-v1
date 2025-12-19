@@ -1,27 +1,23 @@
 import React from "react";
 import styles from "../styles/contactLinks.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileLines } from "@fortawesome/free-solid-svg-icons";
-function redirect(element) {
-  let id = element.currentTarget.id;
-  // console.log(id)
-  let url = undefined;
+
+function redirect(event) {
+  const id = event.currentTarget.id;
+  let url;
+
   switch (id) {
     case "linkedin":
-      url = `https://linkedin.com/in/mukul1107`;
+      url = "https://linkedin.com/in/mukul1107";
       break;
     case "github":
-      url = `https://github.com/mukuls1107`;
+      url = "https://github.com/mukuls1107";
       break;
     case "twitter":
-      url = `https://x.com/mukulownsyou`;
-      break;
-    case "resume":
-      url = `https://drive.google.com/file/d/130jWh9tyjMqSDlSXucHqEHKq2I7_7lsL/view?usp=sharing`;
+      url = "https://x.com/mukulownsyou";
       break;
     default:
-      url = `https://x.com/mukulownsyou`;
-      break;
+      url = "https://x.com/mukulownsyou";
   }
 
   window.open(url, "_blank");
@@ -62,8 +58,7 @@ function ContactLinks() {
         </div>
         <span className={styles.tooltip}>LinkedIn</span>
       </div>
-
-      
+    </div>
   );
 }
 
