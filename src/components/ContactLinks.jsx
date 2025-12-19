@@ -63,13 +63,7 @@ function ContactLinks() {
         <span className={styles.tooltip}>LinkedIn</span>
       </div>
 
-      <div className={styles.iconWrapper}>
-        <div className={styles.items}>
-          <FontAwesomeIcon icon={faFileLines} id="resume" onClick={redirect} />
-        </div>
-        <span className={styles.tooltip}>Resume</span>
-      </div>
-    </div>
+      
   );
 }
 
