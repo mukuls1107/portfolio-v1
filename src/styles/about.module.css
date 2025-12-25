@@ -17,7 +17,7 @@
 }
 
 .aboutTag {
-    color: #64ffda;
+    color: var(--accent-color);
     font-family: monospace;
     font-weight: 900;
     font-size: 70px;
@@ -29,7 +29,7 @@
 .blur.tag {
     font-size: 18px;
     line-height: 1.7;
-    color: #8892b0;
+    color: var(--text-secondary);
     font-family: 'Lato', sans-serif;
     margin-bottom: 0.5rem; /* Added margin for better spacing */
 }
@@ -49,7 +49,7 @@
     position: relative;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    color: #8892b0;
+    color: var(--text-secondary);
     margin-bottom: 10px;
     padding-left: 0.5rem; /* Adding padding to ensure text doesn't overlap with marker */
     display: flex;
@@ -60,7 +60,7 @@
     content: '▹';
     position: absolute;
     left: -1.2rem;
-    color: #64ffda;
+    color: var(--accent-color);
     font-size: 16px;
     display: block;
 }
@@ -87,7 +87,7 @@
 }
 
 .nameGlow {
-    color: #64ffda;
+    color: var(--accent-color);
 }
 
 /* Responsive styles */

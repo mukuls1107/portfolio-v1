@@ -13,22 +13,21 @@ const Projects = forwardRef((props, ref) => {
         <div className={`${styles.pbox} ${styles.blur}`}>
           {" "}
           <div className={styles.projectItems}>
-            <h3 className={styles.projectTitle}>File Upload API</h3>
+            <h3 className={styles.projectTitle}>Lost in Hawkins</h3>
             <p className={styles.projectDescription}>
-              A simple file sharing backend system built using Flask, MongoDB
-              and Cloudinary. Supports user and admin sign up/ sign in for a
-              secured system and allow admins to upload the files and let users
-              download them with a unique link.
+              Generates Stranger Things style missing posters for people. (Just for fun)
             </p>
             <ul className={styles.projectTech}>
-              <li className={styles.techItem}>Flask</li>
-              <li className={styles.techItem}>Cloudinary</li>
-              <li className={styles.techItem}>MongoDB</li>
+              <li className={styles.techItem}>Canvas</li>
+              <li className={styles.techItem}>Gemini API</li>
+              <li className={styles.techItem}>ReactJS</li>
             </ul>
             <div className={styles.projectLinks}>
               <a
-                href="https://github.com/mukuls1107/ez-lab-intern-test"
+                href="https://lostinhawkins.vercel.app/"
                 className={styles.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
@@ -48,26 +47,6 @@ const Projects = forwardRef((props, ref) => {
             <div className={styles.projectLinks}>
               <a
                 href="https://github.com/mukuls1107/sugo"
-                className={styles.projectLink}
-              >
-                <FontAwesomeIcon icon={["fab", "github"]} />
-              </a>
-            </div>
-          </div>
-          <div className={styles.projectItems}>
-            <h3 className={styles.projectTitle}>Developer Story</h3>
-            <p className={styles.projectDescription}>
-              Engineered a responsive resume builder application using React.js
-              and modern web technologies.
-            </p>{" "}
-            <ul className={styles.projectTech}>
-              <li className={styles.techItem}>React</li>
-              <li className={styles.techItem}>Vite</li>
-              <li className={styles.techItem}>CSS</li>
-            </ul>
-            <div className={styles.projectLinks}>
-              <a
-                href="https://github.com/mukuls1107/CV-app"
                 className={styles.projectLink}
               >
                 <FontAwesomeIcon icon={["fab", "github"]} />

@@ -1,5 +1,5 @@
 body {
-  background-color: #020c1b;
+  background-color: var(--bg-color);
   margin: 0px;
   width: 100%;
   min-height: 100%;

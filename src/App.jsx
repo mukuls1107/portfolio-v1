@@ -3,6 +3,7 @@ import Title from "./components/Title";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Effects from "./components/Effects";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   fas,
@@ -50,6 +51,7 @@ function App() {
   }
   return (
     <>
+      <Effects />
       <Title name="Mukul Singh" id="title" ref={titleRef} />
       <About id="about" ref={aboutRef} />
       <Projects id="projects" ref={projectsRef} />

@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #e6f1ff;
+    color: var(--text-primary);
     gap: 1.3rem;
     padding: 2rem;
 }
@@ -29,7 +29,7 @@
     position: relative;
     transition: color 0.3s ease;
     cursor: pointer;
-    color: #e6f1ff94;
+    color: var(--text-primary)94;
 }
 
 .items::after {
@@ -39,12 +39,12 @@
     height: 1px;
     bottom: -2px;
     left: 0;
-    background-color: #64ffda;
+    background-color: var(--accent-color);
     transition: width 0.3s ease;
 }
 
 .backlinks>.items:hover {
-    color: #64ffda;
+    color: var(--accent-color);
     cursor: pointer;
 }
 

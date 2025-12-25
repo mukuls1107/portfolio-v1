@@ -1,5 +1,5 @@
 .clrLight {
-    color: #64ffda;
+    color: var(--accent-color);
     font-family: monospace;
     font-weight: 900;
     font-size: large;
@@ -7,7 +7,7 @@
 }
 
 .head {
-    color: #ccd6f6;
+    color: var(--text-primary);
     font-family: 'Lato';
     font-size: 80px;
     position: relative;
@@ -26,14 +26,14 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #64ffda;
+    background-color: var(--accent-color);
     transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0.8;
-    box-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
+    box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .head:hover {
-    color: #e6f1ff;
+    color: var(--text-primary);
     text-shadow: 0 0 15px rgba(204, 214, 246, 0.3);
     cursor: pointer;
     letter-spacing: -0.5px;
@@ -44,7 +44,7 @@
 }
 
 .blur {
-    color: #8892b0;
+    color: var(--text-secondary);
     font-family: 'Lato';
     font-size: 16px;
     line-height: 1.5;
@@ -147,8 +147,8 @@
     height: 100%;
     max-height: 520px;
     border-radius: 50%; 
-    background: linear-gradient(135deg, #64ffda11 0%, #ccd6f622 50%, #8892b033 100%);
-    border: 2px dashed #64ffda;
+    background: linear-gradient(135deg, var(--accent-color)11 0%, var(--text-primary)22 50%, var(--text-secondary)33 100%);
+    border: 2px dashed var(--accent-color);
     box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
     transform: translate(40px, 20px);
     z-index: 1;
@@ -175,7 +175,7 @@
     /* Wavy border effect */
     animation: waver 8s infinite linear;
     /* Hand-drawn look with dotted pattern */
-    background-image: radial-gradient(#64ffda 1px, transparent 1px);
+    background-image: radial-gradient(var(--accent-color) 1px, transparent 1px);
     background-size: 10px 10px;
     opacity: 0.3;
 }
@@ -190,7 +190,7 @@
     height: calc(100% + 50px);
     border-radius: 50%;
     /* Sketchy border effect */
-    border: 1px solid #64ffda;
+    border: 1px solid var(--accent-color);
     z-index: -1;
     opacity: 0.2;
     transform: rotate(-5deg);
@@ -205,7 +205,7 @@
     height: 140%;
     top: -20%;
     left: -20%;
-    background-image: radial-gradient(#64ffda 1px, transparent 2px);
+    background-image: radial-gradient(var(--accent-color) 1px, transparent 2px);
     background-size: 40px 40px;
     border-radius: 50%;
     z-index: -2;
@@ -215,7 +215,7 @@
 }
 
 .nameGlow{
-    color: #64ffda;
+    color: var(--accent-color);
 }
 
 /* Animation for wave effect */

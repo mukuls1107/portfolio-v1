@@ -21,7 +21,7 @@
 
 .items svg {
     font-size: 20px;
-    color: #8892b0;
+    color: var(--text-secondary);
     transition: all 0.3s ease;
 }
 .items {
@@ -63,7 +63,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #64ffda;
+    background-color: var(--accent-color);
     border-radius: 50%;
     transform: scale(0);
     opacity: 0;
@@ -83,7 +83,7 @@
 }
 
 .items:hover svg {
-    color: #64ffda;
+    color: var(--accent-color);
 }
 
 /* Responsive styles */
