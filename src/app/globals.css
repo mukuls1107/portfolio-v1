@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #111214; /* Deep dark background */
+  --color-foreground: #dbdee1; /* Soft white text */
+  
+  --color-card: #232428; /* Discord profile card background */
+  --color-card-border: #1e1f22;
+
+  --color-muted: #1e1f22;
+  --color-muted-foreground: #949ba4;
+
+  --color-accent: #5865F2; /* Discord blurple */
+  --color-accent-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    background-image: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.01em;
+    color: #f2f3f5;
+  }
+}
+
+@layer utilities {
+  .profile-card {
+    @apply bg-[var(--color-card)] rounded-xl shadow-2xl overflow-hidden border border-[var(--color-card-border)];
+  }
+  
+  .rich-presence {
+    @apply bg-[var(--color-background)] rounded-lg p-4 border border-[var(--color-card-border)];
+  }
+}
