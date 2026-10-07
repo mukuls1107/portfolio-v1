@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ExternalLink } from "@deemlol/next-icons";
 import { animated, useSpring } from "react-spring";
 
-export const CompanyLink = ({ companyName, role, date, logoUrl, href, description }: { companyName: string, role: string, date: string, logoUrl: string, href: string, description: string }) => {
+export const CompanyLink = ({ companyName, role, date, logoUrl, href, description, rel }: { companyName: string, role: string, date: string, logoUrl: string, href: string, description: string, rel?: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 1, tension: 400, friction: 30 } }));
 
@@ -41,7 +41,7 @@ export const CompanyLink = ({ companyName, role, date, logoUrl, href, descriptio
           <ExternalLink size={14} className="text-[var(--color-muted-foreground)] opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block" />
         </div>
       </Link>
-      
+
       <animated.div
         className="fixed pointer-events-none z-[99] w-72 p-4 rounded-xl shadow-2xl border border-[var(--color-card-border)] bg-[var(--color-card)] overflow-hidden hidden sm:block origin-top-left"
         style={{
@@ -61,7 +61,7 @@ export const CompanyLink = ({ companyName, role, date, logoUrl, href, descriptio
             <div className="text-xs font-medium text-blue-400">{href.replace('https://', '')}</div>
           </div>
         </div>
-        
+
         <div className="text-[13px] text-[var(--color-foreground)] leading-relaxed font-medium">
           {description}
         </div>

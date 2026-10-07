@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ExternalLink } from "@deemlol/next-icons";
 import { animated, useSpring } from "react-spring";
 
-export const ProjectLink = ({ href, title, description, imageUrl }: { href: string, title: string, description: string, imageUrl: string }) => {
+export const ProjectLink = ({ href, title, description, imageUrl, rel }: { href: string, title: string, description: string, imageUrl: string, rel?: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 1, tension: 400, friction: 30 } }));
 
@@ -16,9 +16,9 @@ export const ProjectLink = ({ href, title, description, imageUrl }: { href: stri
 
   return (
     <>
-      <Link 
-        href={href} 
-        target="_blank" 
+      <Link
+        href={href}
+        target="_blank"
         className="block p-3 rounded bg-[var(--color-background)] hover:bg-[#313338] border border-[var(--color-card-border)] transition-colors group relative z-10"
         onMouseEnter={(e) => {
           setIsHovered(true);
@@ -35,7 +35,7 @@ export const ProjectLink = ({ href, title, description, imageUrl }: { href: stri
           {description}
         </div>
       </Link>
-      
+
       <animated.div
         className="fixed pointer-events-none z-[99] w-72 rounded-xl shadow-2xl border border-[var(--color-card-border)] bg-[var(--color-card)] overflow-hidden hidden sm:block origin-top-left"
         style={{
