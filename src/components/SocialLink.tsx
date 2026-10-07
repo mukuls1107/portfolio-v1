@@ -8,12 +8,14 @@ export const SocialLink = ({
   href, 
   icon: Icon, 
   hoverColor,
-  previewCard
+  previewCard,
+  ariaLabel
 }: { 
   href: string, 
   icon: any, 
   hoverColor: string,
-  previewCard: ReactNode
+  previewCard: ReactNode,
+  ariaLabel?: string
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 1, tension: 400, friction: 30 } }));
@@ -27,6 +29,8 @@ export const SocialLink = ({
       <Link 
         href={href} 
         target={href.startsWith('mailto') ? undefined : "_blank"} 
+        rel={href.startsWith('mailto') ? undefined : "noopener noreferrer"}
+        aria-label={ariaLabel}
         className={`p-2 rounded bg-[var(--color-background)] hover:bg-[#313338] border border-[var(--color-card-border)] transition-colors text-[var(--color-foreground)] ${hoverColor} flex items-center justify-center relative z-10`}
         onMouseEnter={(e) => {
           setIsHovered(true);

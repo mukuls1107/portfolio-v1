@@ -29,7 +29,7 @@ export default function Home() {
 
         {/* BANNER */}
         <div className="h-32 sm:h-48 w-full relative overflow-hidden">
-          <Image src="/hero.jpg" alt="Hero Banner" fill className="object-cover" />
+          <Image src="/hero.jpg" alt="Hero banner — Mukul Singh's portfolio" fill className="object-cover" priority />
         </div>
 
         {/* AVATAR OVERLAP */}
@@ -48,7 +48,7 @@ export default function Home() {
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#f2f3f5] leading-tight">Mukul Singh</h1>
             <h2 className="text-sm font-medium text-[var(--color-foreground)] mb-4 flex flex-wrap items-center gap-1">
-              <Link href="https://x.com/mukulownsyou" target="_blank" className="hover:underline text-blue-400">
+              <Link href="https://x.com/mukulownsyou" target="_blank" rel="noopener noreferrer" aria-label="Mukul Singh on X (Twitter)" className="hover:underline text-blue-400">
                 @mukulownsyou
               </Link>
               <span className="text-[var(--color-muted-foreground)]">•</span> breaking things is my hobby
@@ -68,24 +68,28 @@ export default function Home() {
             <div className="flex gap-2">
               <SocialLink
                 href="https://github.com/mukuls1107"
+                ariaLabel="Mukul Singh on GitHub"
                 icon={GitHub}
                 hoverColor="hover:text-white"
                 previewCard={<GithubPreview />}
               />
               <SocialLink
                 href="https://linkedin.com/in/mukul1107"
+                ariaLabel="Mukul Singh on LinkedIn"
                 icon={LinkedIn}
                 hoverColor="hover:text-blue-500"
                 previewCard={<LinkedInPreview />}
               />
               <SocialLink
                 href="https://x.com/mukulownsyou"
+                ariaLabel="Mukul Singh on X (Twitter)"
                 icon={XIcon}
                 hoverColor="hover:text-white"
                 previewCard={<TwitterPreview />}
               />
               <SocialLink
                 href="mailto:mukul.110705@gmail.com"
+                ariaLabel="Send email to Mukul Singh"
                 icon={Mail}
                 hoverColor="hover:text-red-500"
                 previewCard={
@@ -117,18 +121,20 @@ export default function Home() {
             <div className="space-y-2">
               <CompanyLink
                 companyName="Saarthi AI"
-                role="Software Engineering Intern"
+                role="Software Engineer"
                 date="Jul 2025 - Present"
                 logoUrl="/company/saarthiai.jpg"
                 href="https://saarthi.ai"
-                description="Built a custom CRM solution with Next.js and Express. Connected integrations across Zoho and WhatsApp Business API. Added Redis and BullMQ for asynchronous background processing."
+                rel="noopener noreferrer"
+                description="Building custom CRM solution with Next.js and Express. Added integrations across Zoho and WhatsApp Business API. Added Redis and BullMQ for asynchronous background processing."
               />
               <CompanyLink
                 companyName="Cloud Maven, Inc."
-                role="Software Engineering Intern"
+                role="Software Engineer"
                 date="Feb 2025 - Jul 2025"
                 logoUrl="/company/cloudmaven.png"
                 href="https://cloudmaveninc.com"
+                rel="noopener noreferrer"
                 description="Developed LWC components and Apex services for document generation and e-signature workflows directly within the Salesforce ecosystem."
               />
             </div>
@@ -143,12 +149,14 @@ export default function Home() {
                 title="Base0"
                 description="Document Signing, Simplified. ESIGN Act + eIDAS compliant SaaS."
                 imageUrl="https://base0.tech/pro-og.png"
+                rel="noopener noreferrer"
               />
               <ProjectLink
                 href="https://supatoken.lol"
                 title="SupaToken.lol"
                 description="Prompt Token Optimizer. Removes unnecessary tokens from LLM prompts."
                 imageUrl="https://supatoken.lol/oglogo.png"
+                rel="noopener noreferrer"
               />
             </div>
           </div>

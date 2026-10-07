@@ -1,0 +1,31 @@
+# Mukul Singh — Full-Stack Developer
+
+> Portfolio of Mukul Singh, a full-stack developer from India specialising in Next.js, Node.js, TypeScript, and SaaS products. Open to remote opportunities in Europe and worldwide.
+
+## About
+
+Mukul Singh is a software engineer building production-grade web applications and APIs. He is currently working at Saarthi AI as a Software Engineer, where he builds CRM solutions with Next.js and Express, and integrates Zoho and WhatsApp Business API. He previously worked at Cloud Maven, Inc., developing Salesforce LWC components and Apex services.
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Python
+- Frontend: Next.js, React, Tailwind CSS
+- Backend: Node.js, Express, REST APIs
+- Databases: PostgreSQL, Redis
+- Tools: BullMQ, Salesforce, Zoho CRM, WhatsApp Business API
+
+## Projects
+
+- **Base0** (https://base0.tech): Document signing SaaS — ESIGN Act + eIDAS compliant.
+- **SupaToken.lol** (https://supatoken.lol): Prompt token optimizer for LLM workflows.
+
+## Contact
+
+- Email: mukul.110705@gmail.com
+- GitHub: https://github.com/mukuls1107
+- LinkedIn: https://linkedin.com/in/mukul1107
+- Twitter/X: https://x.com/mukulownsyou
+
+## Availability
+
+Open to remote full-time and contract roles, especially in Europe (CET/CEST timezone compatible).
